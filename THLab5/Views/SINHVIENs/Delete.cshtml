@@ -1,0 +1,89 @@
+﻿@model THLab5.Models.SINHVIEN
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SINHVIEN</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Hoten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hoten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NamSinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NamSinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dantoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dantoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Khoahoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Khoahoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Khoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Khoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Chuongtrinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chuongtrinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STTLop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STTLop)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SLSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SLSV)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

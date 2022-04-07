@@ -1,0 +1,76 @@
+﻿@model IEnumerable<THLab5.Models.SINHVIEN>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Hoten)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NamSinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dantoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Khoahoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Khoa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Chuongtrinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STTLop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SLSV)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hoten)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NamSinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dantoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Khoahoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Khoa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Chuongtrinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STTLop)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SLSV)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaSV }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaSV }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaSV })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,83 @@
+﻿@model THLab5.Models.SINHVIEN
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SINHVIEN</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Hoten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hoten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NamSinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NamSinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dantoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dantoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Khoahoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Khoahoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Khoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Khoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Chuongtrinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chuongtrinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STTLop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STTLop)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SLSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SLSV)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaSV }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
